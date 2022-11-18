@@ -5,7 +5,7 @@ let darkmodeState = localStorage.getItem("darkmode");
 let initial_state: string = "light";
 
 // check locale storage and system preferences for page theme
-if (darkThemePreference.matches || darkmodeState === "enabled") {
+if ((darkThemePreference.matches || darkmodeState === "enabled") && darkmodeState != "diabled") {
     initial_state = "dark";
 
     let style = document.getElementById("lightmode") as HTMLLinkElement;
