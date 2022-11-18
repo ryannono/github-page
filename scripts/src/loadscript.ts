@@ -21,5 +21,5 @@ let initialView = window.matchMedia("(min-width: 1240px)") as MediaQueryList;
 if (initialView.matches) {
 
     let profilePic = document.getElementById("profile_pic") as HTMLImageElement;
-    profilePic.src = "Images/Profile_Picture_Mobile.png";
+    profilePic.src = "Images/Profile_Picture.svg";
 }
