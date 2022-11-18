@@ -1,10 +1,10 @@
 var darkThemePreference = window.matchMedia("(prefers-color-scheme: dark)");
 var darkmodeState = localStorage.getItem("darkmode");
-var initial_state = "light";
+var currentTheme = "light";
 // check locale storage and system preferences for page theme
-if ((darkThemePreference.matches || darkmodeState === "enabled") && darkmodeState != "diabled") {
-    initial_state = "dark";
+if ((darkThemePreference.matches || darkmodeState === "enabled") && darkmodeState != "disabled") {
     var style = document.getElementById("lightmode");
     style.href = "styles_dark.css";
     style.id = "darkmode";
+    currentTheme = "dark";
 }
