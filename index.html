@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link id="lightmode" rel="stylesheet" type="text/css" href="styles_light.css">
+    <link id="lightmode" rel="stylesheet" type="text/css" href="styles/lightmode.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan's Landing Page</title>
-    <script src="loadscript.js"></script>
+    <script src="scripts/dist/loadscript.js"></script>
 </head>
 <body>
 
     <!--Nav-->
+    <div id="nav_wrapper">
+
     <div class="nav_bar_container">
 
         <!--Left block-->
@@ -63,6 +65,8 @@
                 <img class="icon_img" src="Images/Icon=Resume.svg">
                 <p class="button_text">Download Resume</p>
         </a>
+    </div>
+
     </div>
 
     <!--Main section/body-->
@@ -182,15 +186,21 @@
             </div>
         </div>
     </div>
-
-    <!--Light mode toggle-->
-    <div class="toggle_container">
+    
+    <div id="toggle_wrapper">
+        
+        <!--Dark mode toggle-->
+        <div class="toggle_container">
 
             <img class="mode_toggle" id="dark" src="Images/DarkMode-off.svg">
             <img class="mode_toggle" id="light"  src="Images/LightMode-on.svg">
             
-        <p id="toggle_text">Toggle to dark mode</p>
+            <p id="toggle_text">Toggle to dark mode</p>
+        </div>
+        
     </div>
-    <script src="script.js"></script>
+
+    <script src="scripts/dist/script.js"></script>
+        
 </body>
 </html>

@@ -9,7 +9,7 @@ if ((darkThemePreference.matches || darkmodeState === "enabled") && darkmodeStat
     
     let style = document.getElementById("lightmode") as HTMLLinkElement;
 
-    style.href = "styles_dark.css";
+    style.href = "styles/darkmode.css";
     style.id = "darkmode";
     currentTheme = "dark";
 }

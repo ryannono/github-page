@@ -1,9 +1,9 @@
-function swapToLight (darkmodeToggle,lightmodeToggle,toggleText) {
+function swapToLight (darkmodeToggle: HTMLImageElement,lightmodeToggle: HTMLImageElement,toggleText: HTMLParagraphElement) {
     
     if (currentTheme === "dark") {
 
         let style = document.getElementById("darkmode") as HTMLLinkElement;
-        style.href = "styles_light.css";
+        style.href = "styles/lightmode.css";
         style.id = "lightmode";
 
         darkmodeToggle.src = "Images/DarkMode-off.svg";
@@ -14,12 +14,12 @@ function swapToLight (darkmodeToggle,lightmodeToggle,toggleText) {
     }
 }
 
-function swapToDark (darkmodeToggle,lightmodeToggle,toggleText) {
+function swapToDark (darkmodeToggle: HTMLImageElement,lightmodeToggle: HTMLImageElement,toggleText: HTMLParagraphElement) {
     
     if (currentTheme === "light") {
 
         let style = document.getElementById("lightmode") as HTMLLinkElement;
-        style.href = "styles_dark.css";
+        style.href = "styles/darkmode.css";
         style.id = "darkmode";
 
         darkmodeToggle.src = "Images/DarkMode-on.svg";

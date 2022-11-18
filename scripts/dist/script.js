@@ -1,7 +1,8 @@
+"use strict";
 function swapToLight(darkmodeToggle, lightmodeToggle, toggleText) {
     if (currentTheme === "dark") {
-        var style = document.getElementById("darkmode");
-        style.href = "styles_light.css";
+        let style = document.getElementById("darkmode");
+        style.href = "styles/lightmode.css";
         style.id = "lightmode";
         darkmodeToggle.src = "Images/DarkMode-off.svg";
         lightmodeToggle.src = "Images/LightMode-on.svg";
@@ -12,8 +13,8 @@ function swapToLight(darkmodeToggle, lightmodeToggle, toggleText) {
 }
 function swapToDark(darkmodeToggle, lightmodeToggle, toggleText) {
     if (currentTheme === "light") {
-        var style = document.getElementById("lightmode");
-        style.href = "styles_dark.css";
+        let style = document.getElementById("lightmode");
+        style.href = "styles/darkmode.css";
         style.id = "darkmode";
         darkmodeToggle.src = "Images/DarkMode-on.svg";
         lightmodeToggle.src = "Images/LightMode-off.svg";
@@ -22,21 +23,19 @@ function swapToDark(darkmodeToggle, lightmodeToggle, toggleText) {
         currentTheme = "dark";
     }
 }
-// on button click for each respective toggle switch swap
-var darkmodeToggle = document.getElementById("dark");
-var lightmodeToggle = document.getElementById("light");
-var toggleText = document.getElementById("toggle_text");
-// accomplish what loadscript couldn't (because of placement in html)
+let darkmodeToggle = document.getElementById("dark");
+let lightmodeToggle = document.getElementById("light");
+let toggleText = document.getElementById("toggle_text");
 if (currentTheme === "dark") {
     darkmodeToggle.src = "Images/DarkMode-on.svg";
     lightmodeToggle.src = "Images/LightMode-off.svg";
     toggleText.textContent = "Toggle to light mode";
 }
-// head was declared in loading script -> refers to html "head" element
-// swapToDark change the theme to dark theme (see loadingscript)
-darkmodeToggle.addEventListener("click", function () {
+darkmodeToggle.addEventListener("click", () => {
     swapToDark(darkmodeToggle, lightmodeToggle, toggleText);
 });
-lightmodeToggle.addEventListener("click", function () {
+lightmodeToggle.addEventListener("click", () => {
     swapToLight(darkmodeToggle, lightmodeToggle, toggleText);
 });
+let iconsContainer = document.getElementsByTagName("a")[0];
+iconsContainer.style.transition = "transition: all 2s";
