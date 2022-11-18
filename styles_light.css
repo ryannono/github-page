@@ -7,17 +7,22 @@ body{
     flex-direction: column;
     justify-content: center;
     padding: 33px 22px 90px 22px;
-    background-color: #9da0ad;
-    background-image: url(Images/Background_LightMobile.svg);
+    background-color: #222222;
+    background-image: linear-gradient(29.93deg, #42496F 0%, rgba(66, 73, 111, 0) 37.51%),
+        linear-gradient(186.09deg, #434F6C 0%, rgba(67, 79, 108, 0) 39.79%),
+        linear-gradient(235.04deg, #45637B 1.66%, rgba(69, 99, 123, 0) 52.55%),
+        linear-gradient(71.3deg, #725648 6.08%, rgba(114, 86, 72, 0) 81.88%),
+        linear-gradient(161.8deg, #795E65 5.13%, rgba(121, 94, 101, 0) 23.4%),
+        linear-gradient(293.67deg, #7F5E64 10.87%, rgba(126, 94, 98, 0) 83.24%),
+        linear-gradient(0deg, #FFFFFF, #FFFFFF),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+    color: #FFFFFF;
     background-repeat: no-repeat; 
     background-position: top center;
     background-attachment: fixed;       
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: #FFFFFF;
-    font-family: poppins, Verdana, Tahoma, sans-serif
+    background-size: 100vw auto;
+    font-family: poppins, Verdana, Tahoma, sans-serif;
+    overflow: auto;
 }
 
 .nav_bar_container{
@@ -27,10 +32,10 @@ body{
     gap: 7.62px;
     max-width: 1400px;
     box-shadow: 0px 17.88132667541504px 27.71605682373047px 0px #00000040;
-    background-image: url("Images/ProfileContainerLightbg.svg");
+    background: linear-gradient(126.73deg, #2C2939 0%, rgba(44, 41, 57, 0) 25.65%), linear-gradient(292.27deg, #292B35 0%, rgba(41, 43, 53, 0) 26.75%), linear-gradient(41.39deg, #50353B 11.36%, rgba(80, 53, 59, 0) 76.79%), linear-gradient(204.35deg, #352C21 9.85%, rgba(53, 44, 33, 0) 50.28%);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-color: #101010;
     border-radius: 10px;
     overflow: hidden;
@@ -268,17 +273,23 @@ li{
         align-items: center;
         justify-content: center;
         padding: 36px 36px 36px 36px;
-        background-color: #9da0ad;
-        background-image: url(Images/Background_Light.svg);
-        background-size: cover;
-        background-position: top center;
-        background-repeat: no-repeat;
+        background-color: #222222;
+        background-image: linear-gradient(29.93deg, #42496F 0%, rgba(66, 73, 111, 0) 37.51%),
+        linear-gradient(186.09deg, #434F6C 0%, rgba(67, 79, 108, 0) 39.79%),
+        linear-gradient(235.04deg, #45637B 1.66%, rgba(69, 99, 123, 0) 52.55%),
+        linear-gradient(71.3deg, #725648 6.08%, rgba(114, 86, 72, 0) 81.88%),
+        linear-gradient(161.8deg, #795E65 5.13%, rgba(121, 94, 101, 0) 23.4%),
+        linear-gradient(293.67deg, #7F5E64 10.87%, rgba(126, 94, 98, 0) 83.24%),
+        linear-gradient(0deg, #FFFFFF, #FFFFFF),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+        
         color: #FFFFFF;
         font-family: poppins, Verdana, Tahoma, sans-serif;
+        overflow: auto;
     }
 
     .nav_bar_container{
-        background-image: url("Images/ProfileContainerLightbg.svg");
+        background: linear-gradient(126.73deg, #2C2939 0%, rgba(44, 41, 57, 0) 25.65%), linear-gradient(292.27deg, #292B35 0%, rgba(41, 43, 53, 0) 26.75%), linear-gradient(41.39deg, #50353B 11.36%, rgba(80, 53, 59, 0) 76.79%), linear-gradient(204.35deg, #352C21 9.85%, rgba(53, 44, 33, 0) 50.28%);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;

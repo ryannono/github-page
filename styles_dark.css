@@ -12,7 +12,8 @@ body{
     background-repeat: no-repeat;
     background-position: top center;
     color: #FFFFFF;
-    font-family: poppins, Verdana, Tahoma, sans-serif
+    font-family: poppins, Verdana, Tahoma, sans-serif;
+    overflow: auto;
 }
 
 .nav_bar_container{
@@ -260,6 +261,7 @@ li{
         background-repeat: no-repeat;
         color: #FFFFFF;
         font-family: poppins, Verdana, Tahoma, sans-serif;
+        overflow: auto;
     }
 
     .nav_bar_container{
