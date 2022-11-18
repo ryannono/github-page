@@ -37,5 +37,13 @@ darkmodeToggle.addEventListener("click", () => {
 lightmodeToggle.addEventListener("click", () => {
     swapToLight(darkmodeToggle, lightmodeToggle, toggleText);
 });
-let iconsContainer = document.getElementsByTagName("a")[0];
-iconsContainer.style.transition = "transition: all 2s";
+window.addEventListener("resize", () => {
+    let resizedView = window.matchMedia("(min-width: 1240px)");
+    let profilePic = document.getElementById("profile_pic");
+    if (resizedView.matches) {
+        profilePic.src = "Images/Profile_Picture.svg";
+    }
+    else {
+        profilePic.src = "Images/Profile_Picture_Mobile.svg";
+    }
+});

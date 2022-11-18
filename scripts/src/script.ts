@@ -51,3 +51,20 @@ darkmodeToggle.addEventListener("click", () => {
 lightmodeToggle.addEventListener("click", () => {
         swapToLight(darkmodeToggle,lightmodeToggle,toggleText);
 });
+
+
+// check if newly resized window is desktop size, if it is
+// swap image for desktop optimised one
+window.addEventListener("resize", () => {
+
+    let resizedView = window.matchMedia("(min-width: 1240px)") as MediaQueryList;
+    let profilePic = document.getElementById("profile_pic") as HTMLImageElement;
+
+    if (resizedView.matches) {
+
+        profilePic.src = "Images/Profile_Picture.svg";
+    }
+    else{
+        profilePic.src = "Images/Profile_Picture_Mobile.svg";
+    }
+})
