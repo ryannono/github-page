@@ -98,6 +98,13 @@ a{
     align-items: center;
     align-self: stretch;
     flex-grow: 1;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.2s ease-in background-color;
+}
+
+.icon_card_container:hover{
+    background-color: #2C2C2C;
 }
 
 .icon_img{
@@ -126,7 +133,13 @@ a{
     border-radius: 10px;
     background: #ffffff;
     outline: 0;
-    border: 0;
+    border: 0 solid white;
+    transition: .45s ease-in-out border;
+    
+}
+
+#resume_button:hover{
+    border: 4px solid #2C2C2C;
 }
 
 .content_wrapper{
@@ -255,6 +268,16 @@ li{
     align-self: stretch;
 }
 
+.mode_toggle{
+    cursor: pointer;
+    transform: scale(1);
+    transition: all .3s ease;
+}
+
+.mode_toggle:hover{
+    transform: scale(1.1);
+}
+
 @media (min-width: 1240px) {
     
     body{
@@ -274,7 +297,7 @@ li{
         display: flex;
         flex-direction: column;
         width: 100%;
-        max-width: 1400px;
+        max-width: 1120px;
     }    
 
     .nav_bar_container{
@@ -290,68 +313,74 @@ li{
     #profile_container{
         background-color: #2C2C2C;
         display: flex;
-        flex-grow: 0.1;
+        width: 45%;
         align-items: center;
-        align-self: stretch;
-        padding: 18px 65px 18px 65px;
+        padding: 8px 8px 8px 52px;
         flex-direction: row;
-        column-gap: 35px;
-        max-width: 500px;
+        column-gap: 25px;
+        max-width: 1000px;
     }
 
     #profile_pic{
-        max-width: 73px;
+        max-width: 60px;
     }
 
     h1{
-        line-height: 31px;
-        font-size: 25px;
+        line-height: 26px;
+        font-size: 22px;
         font-weight: 400;
         margin: 0;
     }
     
     h2{
-        font-size: 17px;
+        font-size: 13px;
         font-weight: 200;
-        line-height: 25px;
+        line-height: 22px;
     }
 
     #icons_container{
-        flex-grow: 0.5;
-        padding: 12px 80px 12px 80px;
-        column-gap: 40px;
+        display: flex;
+        width: 35%;
+        padding: 8px 80px 8px 80px;
+        column-gap: 35px;
     }
 
     .icon_subtitle{
-        line-height: 21px;
+        line-height: 20px;
         padding-top: 5px;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 12px;
         margin: 0px;
         text-align: center;
     }
     
     .icon_card_container{
-        transition: all 1s;
         background-color: transparent;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .icon_card_container :hover{
-        background-color: #232323;
-    }
 
     .icon_img{
         padding-left: 13px;
         padding-right: 13px;
-        width: 34px;
+        width: 25px;
     }
+
+    .button_text{
+    padding-top: 5px;
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0px;
+    line-height: 20px;
+    text-align: center;
+    color: #101010;
+}
 
     #resume_button{
         display: flex;
-        flex-grow: 0.5;
+        width: 19%;
         max-width: 220px;
         flex-direction: column;
         align-items: center;
@@ -365,16 +394,16 @@ li{
     .content_wrapper{
         display: flex;
         flex-direction: row;
-        column-gap: 22px;
+        column-gap: 20px;
         align-self: center;
-        max-width: 1400px;
+        max-width: 1120px;
     }
 
 
     
     .content_container{
         width: 55%;
-        margin-top: 37px;
+        margin-top: 30px;
         padding: 24px;
         background-color: #232323;
         border: 5px solid #2F2F2F;
@@ -384,14 +413,14 @@ li{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 23.46px;
+        gap: 20px;
     }
     
     h3{
         text-transform: uppercase;
         font-weight: 700;
-        font-size: 19px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 22px;
         margin: 0;
     }
     
@@ -405,14 +434,14 @@ li{
         line-height: 21px;
         margin: 0;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 12px;
         flex-grow: 1;
     }
     
     .year{
         font-weight: 700;
         margin: 0;
-        font-size: 12px;
+        font-size: 11px;
         line-height: 18px;
         color: #7D7D7D;
         flex-grow: 0;
@@ -422,7 +451,7 @@ li{
         margin: 0;
         line-height: 18px;
         font-weight: 700;
-        font-size: 12px;
+        font-size: 11px;
         color: #BBBBBB;
     }
     
@@ -436,7 +465,7 @@ li{
     
     li{
         font-weight: 400;
-        font-size: 13px;
+        font-size: 12px;
         line-height: 180%;
     }
     
@@ -464,24 +493,24 @@ li{
     
     .body_text{
         font-weight: 400;
-        font-size: 13px;
+        font-size: 12px;
         line-height: 180%;
     }
     
     #education{
         font-weight: 500;
-        font-size: 14px;
+        font-size: 13px;
         line-height: 21px;
     }
     
     #education_subtitle{
         font-weight: 700;
-        font-size: 12px;
+        font-size: 11px;
         line-height: 16px;
     }
 
     #toggle_wrapper{
-        max-width: 1400px;
+        max-width: 1120px;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -498,5 +527,9 @@ li{
         background: #2D2D2D;
         border-radius: 10px;
         align-self: flex-start;
+    }
+
+    #toggle_text{
+        font-size: 14px;
     }
 }
