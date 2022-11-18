@@ -9,10 +9,13 @@ body{
     padding: 33px 22px 90px 22px;
     background-color: #9da0ad;
     background-image: url(Images/Background_LightMobile.svg);
+    background-repeat: no-repeat; 
+    background-position: top center;
+    background-attachment: fixed;       
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     color: #FFFFFF;
     font-family: poppins, Verdana, Tahoma, sans-serif
 }
@@ -25,7 +28,7 @@ body{
     max-width: 1400px;
     box-shadow: 0px 17.88132667541504px 27.71605682373047px 0px #00000040;
     background-image: url("Images/ProfileContainerLightbg.svg");
-    background-position: 50% 0;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #101010;
@@ -268,7 +271,7 @@ li{
         background-color: #9da0ad;
         background-image: url(Images/Background_Light.svg);
         background-size: cover;
-        background-position: 50% 0;
+        background-position: top center;
         background-repeat: no-repeat;
         color: #FFFFFF;
         font-family: poppins, Verdana, Tahoma, sans-serif;
@@ -276,7 +279,7 @@ li{
 
     .nav_bar_container{
         background-image: url("Images/ProfileContainerLightbg.svg");
-        background-position: 50% 0;
+        background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
         background-color: #101010;

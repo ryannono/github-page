@@ -10,7 +10,7 @@ body{
     background-color: #222222;
     background-image: url(Images/Background_Dark.svg);
     background-repeat: no-repeat;
-    background-position: 50% 0;
+    background-position: top center;
     color: #FFFFFF;
     font-family: poppins, Verdana, Tahoma, sans-serif
 }
