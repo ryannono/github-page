@@ -65,6 +65,6 @@ window.addEventListener("resize", () => {
         profilePic.src = "Images/Profile_Picture.svg";
     }
     else{
-        profilePic.src = "Images/Profile_Picture_Mobile.svg";
+        profilePic.src = "Images/Profile_Picture_Mobile.png";
     }
 })

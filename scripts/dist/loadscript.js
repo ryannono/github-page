@@ -11,5 +11,5 @@ if ((darkThemePreference.matches || darkmodeState === "enabled") && darkmodeStat
 let initialView = window.matchMedia("(min-width: 1240px)");
 if (initialView.matches) {
     let profilePic = document.getElementById("profile_pic");
-    profilePic.src = "Images/Profile_Picture.svg";
+    profilePic.src = "Images/Profile_Picture_Mobile.png";
 }
