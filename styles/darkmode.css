@@ -276,6 +276,11 @@ li{
     transform: scale(1.1);
 }
 
+#toggle_text{
+    font-size: 14px;
+    width: 150px;
+}
+
 @media (min-width: 1240px) {
     
     body{
