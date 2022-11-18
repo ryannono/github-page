@@ -15,12 +15,16 @@ var lightmodeToggle = document.getElementById("light");
 darkmodeToggle.addEventListener("click", function () {
     var style = document.getElementById("lightmode");
     if (style) {
+        initial_state = null;
         swapToDark();
+        localStorage.setItem("darkmode", "enabled");
     }
 });
 lightmodeToggle.addEventListener("click", function () {
     var style = document.getElementById("darkmode");
     if (style) {
+        initial_state = null;
         swapToLight();
+        localStorage.setItem("darkmode", "disabled");
     }
 });

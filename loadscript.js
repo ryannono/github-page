@@ -9,7 +9,6 @@ function swapToLight() {
         lightmodeToggle_1.src = "Images/LightMode-on.svg";
         var toggleText = document.getElementById("toggle_text");
         toggleText.textContent = "Toggle to dark mode";
-        localStorage.setItem("darkmode", null);
     }
 }
 function swapToDark() {
@@ -23,7 +22,6 @@ function swapToDark() {
         lightmodeToggle_2.src = "Images/LightMode-off.svg";
         var toggleText = document.getElementById("toggle_text");
         toggleText.textContent = "Toggle to light mode";
-        localStorage.setItem("darkmode", "enabled");
     }
 }
 var darkThemePreference = window.matchMedia("(prefers-color-scheme: dark)");

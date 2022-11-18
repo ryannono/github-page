@@ -22,7 +22,9 @@ darkmodeToggle.addEventListener("click", () => {
     let style = document.getElementById("lightmode") as HTMLLinkElement;
 
     if (style){
+        initial_state = null;
         swapToDark();
+        localStorage.setItem("darkmode", "enabled");
     }
 });
 
@@ -31,6 +33,8 @@ lightmodeToggle.addEventListener("click", () => {
     let style = document.getElementById("darkmode") as HTMLLinkElement;
 
     if (style){
+        initial_state = null;
         swapToLight();
+        localStorage.setItem("darkmode", "disabled");
     }
 });

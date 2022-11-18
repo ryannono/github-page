@@ -15,8 +15,6 @@ function swapToLight () {
 
         let toggleText = document.getElementById("toggle_text") as HTMLParagraphElement;
         toggleText.textContent = "Toggle to dark mode"
-
-        localStorage.setItem("darkmode", null);
     }
 }
 
@@ -37,8 +35,6 @@ function swapToDark () {
 
         let toggleText = document.getElementById("toggle_text") as HTMLParagraphElement;
         toggleText.textContent = "Toggle to light mode"
-
-        localStorage.setItem("darkmode", "enabled");
     } 
 }
 
