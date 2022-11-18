@@ -14,7 +14,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #FFFFFF;
-    font-family: poppins, Tahoma, Verdana, sans-serif;
+    font-family: poppins, Verdana, Tahoma, sans-serif
 }
 
 .nav_bar_container{
@@ -49,7 +49,7 @@ body{
 }
 
 h1{
-    font-family: inter, Tahoma, Verdana, sans-serif;
+    font-family: inter, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 19px;
     line-height: 23px;
     font-weight: 400;
@@ -57,7 +57,7 @@ h1{
 }
 
 h2{
-    font-family: inter, Tahoma, Verdana, sans-serif;
+    font-family: inter, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 13px;
     font-weight: 200;
     line-height: 16px;
@@ -271,7 +271,7 @@ li{
         background-position: 50% 0;
         background-repeat: no-repeat;
         color: #FFFFFF;
-        font-family: poppins, Tahoma, Verdana, sans-serif;
+        font-family: poppins, Verdana, Tahoma, sans-serif;
     }
 
     .nav_bar_container{
@@ -282,7 +282,7 @@ li{
         background-color: #101010;
         display: flex;
         flex-direction: row;
-        align-self: stretch;
+        width: 100%;
         box-shadow: 0px 17.8813px 27.7161px rgba(0, 0, 0, 0.25);
         border-radius: 10px;
         overflow: hidden;
@@ -292,8 +292,8 @@ li{
         background-color: transparent;
         border-right: 1px solid rgba(255, 255, 255, 0.191);
         display: flex;
+        flex-grow: 0.1;
         align-items: center;
-        align-self: stretch;
         padding: 18px 65px 18px 65px;
         flex-direction: row;
         column-gap: 35px;
@@ -319,6 +319,7 @@ li{
 
     #icons_container{
         background-color: transparent;
+        flex-grow: 0.5;
         padding: 12px 80px 12px 80px;
         column-gap: 40px;
     }
@@ -347,7 +348,7 @@ li{
 
     #resume_button{
         display: flex;
-        align-self: stretch;
+        flex-grow: 0.5;
         max-width: 220px;
         flex-direction: column;
         align-items: center;
@@ -365,6 +366,8 @@ li{
         align-self: stretch;
         max-width: 1400px;
     }
+
+    
     
     .content_container{
         width: 55%;
