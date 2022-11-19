@@ -68,3 +68,14 @@ window.addEventListener("resize", () => {
         profilePic.src = "Images/Profile_Picture_Mobile.png";
     }
 })
+
+//depending on light or dark mode download appropriate resume
+let downloadButton = document.getElementById("resume_button") as HTMLLinkElement;
+downloadButton.addEventListener("click", () => {
+    if (currentTheme === "dark") {
+        downloadButton.href = "https://github.com/ryannono/Resume/raw/main/Ryan-Nono-Resume-Winter2023-Dark_compressed.pdf";
+    }
+    else{
+        downloadButton.href = "https://github.com/ryannono/Resume/raw/main/Ryan-Nono-Resume-Winter2023-Light_compressed.pdf";
+    }
+})
