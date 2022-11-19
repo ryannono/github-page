@@ -62,11 +62,12 @@ function themedCVDownload() {
         downloadButton.href = "https://github.com/ryannono/Resume/raw/main/Ryan-Nono-Resume-Winter2023-Light_compressed.pdf";
     }
 }
+swapProfilePic();
+window.addEventListener("resize", swapProfilePic);
 if (currentTheme === "dark") {
     swapToggles(currentTheme);
     localStorage.setItem("darkmode", "system preference");
 }
 mode_toggleClickListener();
-window.addEventListener("resize", swapProfilePic);
 let downloadButton = document.getElementById("resume_button");
 downloadButton.addEventListener("click", themedCVDownload);

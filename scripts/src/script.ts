@@ -102,19 +102,20 @@ function themedCVDownload ():void {
     }
 }
 
+// check if window is of desktop size on first load
+// and on window resize if it is
+// swap image to desktop optimised one
+swapProfilePic();
+window.addEventListener("resize", swapProfilePic);
+
 // accomplish rest of dark theme load that loadscript.js
 // couldn't (because of placement in html)
+// and listen for future toggle clicks (theme swap requests) 
 if (currentTheme === "dark") {
     swapToggles(currentTheme);
     localStorage.setItem("darkmode", "system preference");
 }
-
-// listens and swaps theme on toggle click
 mode_toggleClickListener();
-
-// check if newly resized window is desktop size, if it is
-// swap profile pic for desktop optimised one
-window.addEventListener("resize", swapProfilePic);
 
 //depending on light or dark mode download appropriate resume
 let downloadButton = document.getElementById("resume_button") as HTMLLinkElement;
