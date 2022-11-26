@@ -6,4 +6,4 @@
 
 - Play with the theme by toggling from light mode to dark mode (toggle at the bottom of the page)
 
-    That's it! - here's the link to the live site: [Live Github Page](ryannono.github.io/github-page/)
+    That's it! - here's the link to the live site: [Live Github Page](https://ryannono.github.io/github-page/)
