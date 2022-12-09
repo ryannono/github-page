@@ -1,4 +1,6 @@
-import { currentTheme } from './loadscript';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const loadscript_1 = require("./loadscript");
 function swapToggles(themeToMatch) {
     const darkmodeToggle = document.getElementById('dark');
     const lightmodeToggle = document.getElementById('light');
@@ -54,7 +56,7 @@ function swapProfilePic() {
         profilePic.src = 'Images/Profile_Picture_Mobile.png';
     }
 }
-let theme = currentTheme;
+let theme = loadscript_1.currentTheme;
 function themedCVDownload() {
     if (theme === 'dark') {
         downloadButton.href =
