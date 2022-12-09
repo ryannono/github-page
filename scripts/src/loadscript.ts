@@ -7,7 +7,6 @@ const darkThemePreference = window.matchMedia(
 const darkmodeState = localStorage.getItem('darkmode');
 let currentTheme = 'light';
 
-
 if (
   darkmodeState === 'dark system preference' ||
   darkmodeState === 'enabled' ||

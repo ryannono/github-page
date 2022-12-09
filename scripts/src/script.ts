@@ -21,7 +21,6 @@ function swapToggles(themeToMatch: string): void {
   }
 }
 
-
 /**
  * It swaps the stylesheet to the lightmode.css file, changes the id of the stylesheet to lightmode,
  * and sets the localStorage item to disabled
@@ -35,7 +34,6 @@ function swapToLight(): void {
   currentTheme = 'light';
   swapToggles(currentTheme);
 }
-
 
 /**
  * It swaps the stylesheet to the dark mode stylesheet and sets the localStorage item to 'enabled'
