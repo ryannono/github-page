@@ -1,3 +1,5 @@
+import {currentTheme} from './loadscript';
+
 /**
  * It takes a string as an argument, and if the string is 'dark', it sets the darkmode toggle to 'on'
  * and the lightmode toggle to 'off', and vice versa
@@ -31,8 +33,8 @@ function swapToLight(): void {
   style.id = 'lightmode';
 
   localStorage.setItem('darkmode', 'disabled');
-  currentTheme = 'light';
-  swapToggles(currentTheme);
+  theme = 'light';
+  swapToggles(theme);
 }
 
 /**
@@ -44,8 +46,8 @@ function swapToDark(): void {
   style.id = 'darkmode';
 
   localStorage.setItem('darkmode', 'enabled');
-  currentTheme = 'dark';
-  swapToggles(currentTheme);
+  theme = 'dark';
+  swapToggles(theme);
 }
 
 /**
@@ -54,9 +56,9 @@ function swapToDark(): void {
  * @param {HTMLElement} trigger - HTMLElement - the element that was clicked
  */
 function themeSwap(trigger: HTMLElement): void {
-  if (trigger.id === 'dark' && currentTheme === 'light') {
+  if (trigger.id === 'dark' && theme === 'light') {
     swapToDark();
-  } else if (trigger.id === 'light' && currentTheme === 'dark') {
+  } else if (trigger.id === 'light' && theme === 'dark') {
     swapToLight();
   }
 }
@@ -107,12 +109,15 @@ function swapProfilePic(): void {
   }
 }
 
+/* Setting the theme variable to the current theme. */
+let theme = currentTheme;
+
 /**
  * If the current theme is dark, then the download button's href attribute will be set to the dark
  * theme resume, otherwise it will be set to the light theme resume
  */
 function themedCVDownload(): void {
-  if (currentTheme === 'dark') {
+  if (theme === 'dark') {
     downloadButton.href =
       'https://github.com/ryannono/Resume/raw/main/Ryan-Nono-Resume-Winter2023-Dark_compressed.pdf';
   } else {
@@ -130,8 +135,8 @@ window.addEventListener('resize', swapProfilePic);
 It then adds an event listener to all elements with the class 'mode_toggle' that listens for a click
 event,
 and when it is triggered, it executes the themeSwap function. */
-if (currentTheme === 'dark') {
-  swapToggles(currentTheme);
+if (theme === 'dark') {
+  swapToggles(theme);
 }
 addClassListener('mode_toggle', 'click', themeSwap);
 
