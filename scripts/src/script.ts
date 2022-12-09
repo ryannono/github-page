@@ -1,7 +1,8 @@
-// swapToggles gets swap the theme toggles and the corresponding
-// text to match the passed theme
-// Ex. theme passed is white -> light toggle will be turned on
-//     and dark toggle will be turned off
+/**
+ * It takes a string as an argument, and if the string is 'dark', it sets the darkmode toggle to 'on'
+ * and the lightmode toggle to 'off', and vice versa
+ * @param {string} themeToMatch - The theme that the toggle should match.
+ */
 function swapToggles(themeToMatch: string): void {
   const darkmodeToggle = document.getElementById('dark') as HTMLImageElement;
   const lightmodeToggle = document.getElementById('light') as HTMLImageElement;
@@ -20,7 +21,11 @@ function swapToggles(themeToMatch: string): void {
   }
 }
 
-// swapToLight switches to the light css theme
+
+/**
+ * It swaps the stylesheet to the lightmode.css file, changes the id of the stylesheet to lightmode,
+ * and sets the localStorage item to disabled
+ */
 function swapToLight(): void {
   const style = document.getElementById('darkmode') as HTMLLinkElement;
   style.href = 'styles/lightmode.css';
@@ -31,7 +36,10 @@ function swapToLight(): void {
   swapToggles(currentTheme);
 }
 
-// swapToDark switches to the dark css theme
+
+/**
+ * It swaps the stylesheet to the dark mode stylesheet and sets the localStorage item to 'enabled'
+ */
 function swapToDark(): void {
   const style = document.getElementById('lightmode') as HTMLLinkElement;
   style.href = 'styles/darkmode.css';
@@ -42,9 +50,11 @@ function swapToDark(): void {
   swapToggles(currentTheme);
 }
 
-// theme swap identifies if the theme should be
-// swapped to light, dark on no change based on
-// which toggle was pressed and the current theme
+/**
+ * If the trigger is the dark theme button and the current theme is light, swap to dark. If the trigger
+ * is the light theme button and the current theme is dark, swap to light
+ * @param {HTMLElement} trigger - HTMLElement - the element that was clicked
+ */
 function themeSwap(trigger: HTMLElement): void {
   if (trigger.id === 'dark' && currentTheme === 'light') {
     swapToDark();
@@ -53,9 +63,19 @@ function themeSwap(trigger: HTMLElement): void {
   }
 }
 
-// addClassListener adds an the "eventName" passed event trigger
-// to every item in the passed "className" class to trigger a
-// "functionToExecute"
+/**
+ * "Add an event listener to all elements with a given class name."
+ *
+ * The function takes three arguments:
+ *
+ * className: The class name of the elements you want to add the event listener to.
+ * eventName: The name of the event you want to listen for.
+ * funtionToExecute: The function you want to execute when the event is triggered.
+ * The function returns nothing
+ * @param {string} className - The class name of the element you want to add the event listener to.
+ * @param {string} eventName - The name of the event you want to listen for.
+ * @param {Function} funtionToExecute - The function that will be executed when the event is triggered.
+ */
 function addClassListener(
   className: string,
   eventName: string,
@@ -72,9 +92,10 @@ function addClassListener(
   }
 }
 
-// swapProfilePic swaps from smaller png profile
-// pic (for mobile) to large svg if the screen size
-// is detected to be desktop
+/**
+ * If the viewport is greater than 1240px, the profile picture will be the SVG version, otherwise it
+ * will be the PNG version
+ */
 function swapProfilePic(): void {
   const resizedView = window.matchMedia(
     '(min-width: 1240px)'
@@ -88,9 +109,10 @@ function swapProfilePic(): void {
   }
 }
 
-// themedCVDownload changes cv download link to match current theme
-// Ex. you are on the light theme, and press "download resume", the
-//     the downloaded resume will be the lightmode version
+/**
+ * If the current theme is dark, then the download button's href attribute will be set to the dark
+ * theme resume, otherwise it will be set to the light theme resume
+ */
 function themedCVDownload(): void {
   if (currentTheme === 'dark') {
     downloadButton.href =
@@ -101,21 +123,24 @@ function themedCVDownload(): void {
   }
 }
 
-// check if window is of desktop size on first load
-// and on window resize if it is
-// swap image to desktop optimised one
+/* Checking if the window is of desktop size on first load, and on window resize; if it is swap image to
+desktop optimised one. */
 swapProfilePic();
 window.addEventListener('resize', swapProfilePic);
 
-// accomplish rest of dark theme load that loadscript.js
-// couldn't (because of placement in html)
-// and listen for future toggle clicks (theme swap requests)
+/* Checking if the current theme is dark, and if it is, it swaps the toggles to the dark theme.
+It then adds an event listener to all elements with the class 'mode_toggle' that listens for a click
+event,
+and when it is triggered, it executes the themeSwap function. */
 if (currentTheme === 'dark') {
   swapToggles(currentTheme);
 }
 addClassListener('mode_toggle', 'click', themeSwap);
 
-//depending on light or dark mode download appropriate resume
+/* Getting the element with the id 'resume_button' and casting it as a HTMLLinkElement.
+It then adds an event listener to the element that listens for a click event, and when it is
+triggered,
+it executes the themedCVDownload function. */
 const downloadButton = document.getElementById(
   'resume_button'
 ) as HTMLLinkElement;

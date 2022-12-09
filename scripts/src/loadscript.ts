@@ -1,14 +1,17 @@
+/* Checking if the user has dark mode enabled on their system. If they do, it will load the dark mode
+stylesheet. */
+
 const darkThemePreference = window.matchMedia(
   '(prefers-color-scheme: dark)'
 ) as MediaQueryList;
 const darkmodeState = localStorage.getItem('darkmode');
 let currentTheme = 'light';
 
-// check locale storage and system preferences for page theme
+
 if (
   darkmodeState === 'dark system preference' ||
   darkmodeState === 'enabled' ||
-  (darkThemePreference.matches && darkmodeState != 'disabled')
+  (darkThemePreference.matches && darkmodeState !== 'disabled')
 ) {
   const style = document.getElementById('lightmode') as HTMLLinkElement;
 
