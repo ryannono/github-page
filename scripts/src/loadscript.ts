@@ -4,7 +4,7 @@ const darkThemePreference = window.matchMedia(
   '(prefers-color-scheme: dark)'
 ) as MediaQueryList;
 const darkmodeState = localStorage.getItem('darkmode');
-export let currentTheme = 'light';
+let currentTheme = 'light';
 
 if (
   darkmodeState === 'dark system preference' ||

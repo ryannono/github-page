@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const loadscript_1 = require("./loadscript");
 function swapToggles(themeToMatch) {
     const darkmodeToggle = document.getElementById('dark');
     const lightmodeToggle = document.getElementById('light');
@@ -21,22 +19,22 @@ function swapToLight() {
     style.href = 'styles/lightmode.css';
     style.id = 'lightmode';
     localStorage.setItem('darkmode', 'disabled');
-    theme = 'light';
-    swapToggles(theme);
+    currentTheme = 'light';
+    swapToggles(currentTheme);
 }
 function swapToDark() {
     const style = document.getElementById('lightmode');
     style.href = 'styles/darkmode.css';
     style.id = 'darkmode';
     localStorage.setItem('darkmode', 'enabled');
-    theme = 'dark';
-    swapToggles(theme);
+    currentTheme = 'dark';
+    swapToggles(currentTheme);
 }
 function themeSwap(trigger) {
-    if (trigger.id === 'dark' && theme === 'light') {
+    if (trigger.id === 'dark' && currentTheme === 'light') {
         swapToDark();
     }
-    else if (trigger.id === 'light' && theme === 'dark') {
+    else if (trigger.id === 'light' && currentTheme === 'dark') {
         swapToLight();
     }
 }
@@ -56,9 +54,8 @@ function swapProfilePic() {
         profilePic.src = 'Images/Profile_Picture_Mobile.png';
     }
 }
-let theme = loadscript_1.currentTheme;
 function themedCVDownload() {
-    if (theme === 'dark') {
+    if (currentTheme === 'dark') {
         downloadButton.href =
             'https://github.com/ryannono/Resume/raw/main/Ryan-Nono-Resume-Winter2023-Dark_compressed.pdf';
     }
@@ -69,8 +66,8 @@ function themedCVDownload() {
 }
 swapProfilePic();
 window.addEventListener('resize', swapProfilePic);
-if (theme === 'dark') {
-    swapToggles(theme);
+if (currentTheme === 'dark') {
+    swapToggles(currentTheme);
 }
 addClassListener('mode_toggle', 'click', themeSwap);
 const downloadButton = document.getElementById('resume_button');
